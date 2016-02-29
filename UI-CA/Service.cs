@@ -48,7 +48,7 @@ namespace SC.UI.CA
 
     private void DoIndependentWork()
     {
-       Console.WriteLine( "Loading . . . . . . .\r\n");
+       Console.WriteLine( "Loading responses . . . . . . .\r\n");
     }
 
     public TicketResponse AddTicketResponse(int ticketNumber, string response, bool isClientResponse)
