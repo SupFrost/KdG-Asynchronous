@@ -12,3 +12,8 @@ C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\Domai
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\Domain\bin\Debug\SC.BL.Domain.pdb
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\Domain\obj\Debug\SC.BL.Domain.dll
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\Domain\obj\Debug\SC.BL.Domain.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\bin\Debug\SC.BL.Domain.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\bin\Debug\SC.BL.Domain.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\obj\Debug\SC.BL.Domain.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\obj\Debug\SC.BL.Domain.pdb

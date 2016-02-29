@@ -39,3 +39,21 @@ C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\UI-CA
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\UI-CA\obj\Debug\SC.UI.CA.exe
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\UI-CA\obj\Debug\SC.UI.CA.pdb
 C:\Users\Nick Jorens\Desktop\Eg_SupportCenter-WebAPI - OPLOSSING (1)\Eg_SupportCenter-WebAPI\UI-CA\bin\Debug\SC.UI.CA.exe.config
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.UI.CA.exe.config
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.UI.CA.exe
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.UI.CA.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.BL.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.BL.Domain.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.DAL.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\EntityFramework.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.BL.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.BL.Domain.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.DAL.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\EntityFramework.xml
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\obj\Debug\UI-CA.csprojResolveAssemblyReference.cache
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\obj\Debug\SC.UI.CA.exe
+C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\obj\Debug\SC.UI.CA.pdb

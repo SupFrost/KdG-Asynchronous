@@ -24,3 +24,15 @@ C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\DAL\b
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\DAL\obj\Debug\SC.DAL.dll
 C:\Users\Kenneth\OneDrive\KdG_1516\dotNET-deel1\_DRAFT\Eg_SupportCenter-EF\DAL\obj\Debug\SC.DAL.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\SC.DAL.dll.config
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\SC.DAL.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\SC.DAL.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\EntityFramework.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\SC.BL.Domain.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\SC.BL.Domain.pdb
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\EntityFramework.xml
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\obj\Debug\SC.DAL.dll
+C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\obj\Debug\SC.DAL.pdb
