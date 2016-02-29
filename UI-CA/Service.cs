@@ -15,7 +15,7 @@ namespace SC.UI.CA
     private const string baseUri = "http://localhost:51150/api/";
     //private const string baseUri = "http://localhost.fiddler:51150/api/"; // use this when using fiddler to capture traffic! 
 
-    public IEnumerable<TicketResponse> GetTicketResponses(int ticketNumber)
+    public async Task<IEnumerable<TicketResponse>> GetTicketResponsesAsync(int ticketNumber)
     {
       IEnumerable<TicketResponse> responses = null;
 
@@ -26,21 +26,29 @@ namespace SC.UI.CA
         //Verwachte content-type van de response meegeven
         httpRequest.Headers.Add("Accept", "application/json");
         //Request versturen en wachten op de response
-        HttpResponseMessage httpResponse = http.SendAsync(httpRequest).Result;
-        if (httpResponse.IsSuccessStatusCode)
+        Task<HttpResponseMessage> httpResponse = http.SendAsync(httpRequest);
+        if (httpResponse.Result.IsSuccessStatusCode)
         {
           //Body van de response uitlezen als een string
-          string responseContentAsString = httpResponse.Content.ReadAsStringAsync().Result;
+          HttpResponseMessage responseContent = await httpResponse;
+          DoIndependentWork();
+
+          string responseContentAsString= responseContent.Content.ReadAsStringAsync().Result;
           //Body-string (in json-format) deserializeren (omzetten) naar een verzameling van TicketResponse-objecten
           responses = JsonConvert.DeserializeObject<List<TicketResponse>>(responseContentAsString);
         }
         else
         {
-          throw new Exception(httpResponse.StatusCode + " " + httpResponse.ReasonPhrase);
+          throw new Exception(httpResponse.Result.StatusCode + " " + httpResponse.Result.ReasonPhrase);
         }
       }
 
       return responses;
+    }
+
+    private void DoIndependentWork()
+    {
+       Console.WriteLine( "Loading . . . . . . .\r\n");
     }
 
     public TicketResponse AddTicketResponse(int ticketNumber, string response, bool isClientResponse)

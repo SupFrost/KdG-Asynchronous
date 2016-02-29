@@ -127,8 +127,8 @@ namespace SC.UI.CA
 
       //IEnumerable<TicketResponse> responses = mgr.GetTicketResponses(input);
       // via Web API-service
-      IEnumerable<TicketResponse> responses = srv.GetTicketResponses(input);
-      if (responses != null) PrintTicketResponses(responses);
+      Task<IEnumerable<TicketResponse>> responses = srv.GetTicketResponsesAsync(input);
+      if (responses != null) PrintTicketResponses(responses.Result);
     }
 
     private static void PrintTicketResponses(IEnumerable<TicketResponse> responses)
