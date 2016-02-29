@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +18,8 @@ namespace SC.DAL
     public TicketRepositoryHC()
     {
       Seed();
-    }
+            Serialize(tickets);
+        }
 
     private void Seed()
     {
@@ -111,10 +114,22 @@ namespace SC.DAL
       };
 
       tickets.Add(ht1);
+
+            
     }
 
-    #region 'ITicketRepository' implementatie
-    public Ticket CreateTicket(Ticket ticket)
+        private void Serialize(List<Ticket> tickets)
+        {
+            using (Stream stream = File.Open("tickets.bin", FileMode.Create))
+            {
+                BinaryFormatter bformatter = new BinaryFormatter();
+
+                bformatter.Serialize(stream, tickets);
+            }
+        }
+
+        #region 'ITicketRepository' implementatie
+        public Ticket CreateTicket(Ticket ticket)
     {
       ticket.TicketNumber = tickets.Count + 1;
       tickets.Add(ticket);
