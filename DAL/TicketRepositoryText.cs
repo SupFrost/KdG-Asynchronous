@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 using SC.BL.Domain;
 
 namespace SC.DAL
@@ -80,26 +83,25 @@ namespace SC.DAL
 
         private async Task<List<Ticket>> DeserializeAsync()
         {
-      
-                using (Stream stream = File.Open("tickets.bin", FileMode.Open))
-                {
-                    BinaryFormatter bformatter = new BinaryFormatter();
-                    return (List<Ticket>)  bformatter.Deserialize(stream);
-                }
+
           
 
-            
         }
 
         public async void SerializeAsync(List<Ticket> tickets)
         {
-
-            using (Stream stream = File.Open("tickets.bin", FileMode.Create))
+            using (var stream = new StreamWriter("tickets.xml"))
             {
-                BinaryFormatter bformatter = new BinaryFormatter();
-
-                bformatter.Serialize(stream, tickets);
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Ticket>));
+                XmlWriter writer = new XmlTextWriter(stream.BaseStream,new UTF8Encoding());
+                writer.WriteStringAsync(serializer.)
+                using (XmlWriter xmlWriter = XmlWriter.Create(stream, new XmlWriterSettings() { Indent = true }))
+                {
+                    serializer.Serialize(xmlWriter, tickets);
+                }
             }
+
+
         }
     }
 }
