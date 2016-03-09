@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using SC.BL.Domain;
 
@@ -19,7 +20,7 @@ namespace SC.DAL.EF
       ctx.Database.Initialize(false);
     }
 
-    public IEnumerable<Ticket> ReadTickets()
+    public async Task<IEnumerable<Ticket>> ReadTicketsAsync()
     {
       //IEnumerable<Ticket> tickets = ctx.Tickets.AsEnumerable<Ticket>();
 
@@ -28,15 +29,30 @@ namespace SC.DAL.EF
 
       // Lazy-loading
       //IEnumerable<Ticket> tickets = ctx.Tickets.AsEnumerable<Ticket>(); // needs 'Multiple Active Result Sets' (MARS) for lazy-loading (connectionstring)
-      IEnumerable<Ticket> tickets = ctx.Tickets.ToList<Ticket>(); // all (parent-)entities are loaded before lazy-loading associated data (doesn't need MARS)
-
+      Task<List<Ticket>> ticketsAsync = ctx.Tickets.ToListAsync<Ticket>(); // all (parent-)entities are loaded before lazy-loading associated data (doesn't need MARS)
+      IEnumerable<Ticket> tickets = await ticketsAsync;
+      DoIndependentWork();
       return tickets;
+    }
+
+    private void DoIndependentWork()
+    {
+      Console.WriteLine(DateTime.Now.ToString());
+      Console.WriteLine("Loading Tickets . . . . . . .\r\n");
+      Console.WriteLine(DateTime.Now.ToString());
+
     }
 
     public Ticket ReadTicket(int ticketNumber)
     {
       Ticket ticket = ctx.Tickets.Find(ticketNumber);
       return ticket;
+    }
+
+    public IEnumerable<Ticket> ReadTickets()
+    {
+      IEnumerable<Ticket> tickets = (IEnumerable<Ticket>)ReadTicketsAsync();
+      return tickets;
     }
 
     public Ticket CreateTicket(Ticket ticket)

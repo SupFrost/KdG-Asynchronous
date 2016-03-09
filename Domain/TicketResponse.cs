@@ -6,7 +6,8 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 namespace SC.BL.Domain
 {
-  public class TicketResponse : IValidatableObject
+    [Serializable]
+    public class TicketResponse : IValidatableObject
   {
     public int Id { get; set; }
     [Required]

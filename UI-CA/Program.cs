@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using SC.BL;
 using SC.BL.Domain;
 using SC.UI.CA.ExtensionMethods;
+using TestAsync;
 
 namespace SC.UI.CA
 {
-  class Program
+    internal class Program
   {
-    private static bool quit = false;
-    private static readonly ITicketManager mgr = new TicketManager();
-    private static readonly Service srv = new Service();
+        private static bool quit;
+        private static ITicketManager mgr;
+        private static Service srv;
 
-    static void Main(string[] args)
+        private static void Main(string[] args)
     {
+           
+
+            mgr = new TicketManager();
+            srv = new Service();
+
+           
+
       while (!quit)
         ShowMenu();
     }
@@ -38,7 +43,7 @@ namespace SC.UI.CA
       {
         DetectMenuAction();
       }
-      catch (Exception e)
+            catch (Exception)
       {
         Console.WriteLine();
         Console.WriteLine("Er heeft zich een onverwachte fout voorgedaan!");
@@ -48,28 +53,34 @@ namespace SC.UI.CA
     
     private static void DetectMenuAction()
     {
-      bool inValidAction = false;
+            var inValidAction = false;
       do
       {
         Console.Write("Keuze: ");
-        string input = Console.ReadLine();
+                var input = Console.ReadLine();
         int action;
-        if (Int32.TryParse(input, out action))
+                if (int.TryParse(input, out action))
         {
           switch (action)
           {
             case 1:
-              PrintAllTickets(); break;
+                            PrintAllTickets();
+                            break;
             case 2:
-              ActionShowTicketDetails(); break;
+                            ActionShowTicketDetails();
+                            break;
             case 3:
-              ActionShowTicketResponses(); break;
+                            ActionShowTicketResponses();
+                            break;
             case 4:
-              ActionCreateTicket(); break;
+                            ActionCreateTicket();
+                            break;
             case 5:
-              ActionAddResponseToTicket(); break;
+                            ActionAddResponseToTicket();
+                            break;
             case 6:
-              ActionCloseTicket(); break;
+                            ActionCloseTicket();
+                            break;
             case 0:
               quit = true;
               return;
@@ -85,7 +96,7 @@ namespace SC.UI.CA
     private static void ActionCloseTicket()
     {
       Console.Write("Ticketnummer: ");
-      int input = Int32.Parse(Console.ReadLine());
+            var input = int.Parse(Console.ReadLine());
 
       //mgr.ChangeTicketStateToClosed(input);
       // via WebAPI-service
@@ -94,14 +105,14 @@ namespace SC.UI.CA
 
     private static void PrintAllTickets()
     {
-      foreach (var t in mgr.GetTickets())
+            foreach (Ticket t in mgr.GetTickets())
         Console.WriteLine(t.GetInfo());
     }
 
     private static void ActionShowTicketDetails()
     {
       Console.Write("Ticketnummer: ");
-      int input = Int32.Parse(Console.ReadLine());
+            var input = int.Parse(Console.ReadLine());
 
       Ticket t = mgr.GetTicket(input);
       PrintTicketDetails(t);
@@ -115,7 +126,7 @@ namespace SC.UI.CA
       Console.WriteLine("{0,-15}: {1}", "Status", ticket.State);
 
       if (ticket is HardwareTicket)
-        Console.WriteLine("{0,-15}: {1}", "Toestel", ((HardwareTicket)ticket).DeviceName);
+                Console.WriteLine("{0,-15}: {1}", "Toestel", ((HardwareTicket) ticket).DeviceName);
 
       Console.WriteLine("{0,-15}: {1}", "Vraag/probleem", ticket.Text);
     }
@@ -123,7 +134,7 @@ namespace SC.UI.CA
     private static void ActionShowTicketResponses()
     {
       Console.Write("Ticketnummer: ");
-      int input = Int32.Parse(Console.ReadLine());
+            var input = int.Parse(Console.ReadLine());
 
       //IEnumerable<TicketResponse> responses = mgr.GetTicketResponses(input);
       // via Web API-service
@@ -133,18 +144,18 @@ namespace SC.UI.CA
 
     private static void PrintTicketResponses(IEnumerable<TicketResponse> responses)
     {
-      foreach (var r in responses)
+            foreach (TicketResponse r in responses)
         Console.WriteLine(r.GetInfo());
     }
 
     private static void ActionCreateTicket()
     {
-      int accountNumber = 0;
-      string problem = "";
-      string device = "";
+            var accountNumber = 0;
+            var problem = "";
+            var device = "";
       
       Console.Write("Is het een hardware probleem (j/n)? ");
-      bool isHardwareProblem = (Console.ReadLine().ToLower() == "j");
+            var isHardwareProblem = Console.ReadLine().ToLower() == "j";
       if (isHardwareProblem)
       {
         Console.Write("Naam van het toestel: ");
@@ -152,7 +163,7 @@ namespace SC.UI.CA
       }
 
       Console.Write("Gebruikersnummer: ");
-      accountNumber = Int32.Parse(Console.ReadLine());
+            accountNumber = int.Parse(Console.ReadLine());
       Console.Write("Probleem: ");
       problem = Console.ReadLine();
 
@@ -165,9 +176,9 @@ namespace SC.UI.CA
     private static void ActionAddResponseToTicket()
     {
       Console.Write("Ticketnummer: ");
-      int ticketNumber = Int32.Parse(Console.ReadLine());
+            var ticketNumber = int.Parse(Console.ReadLine());
       Console.Write("Antwoord: ");
-      string response = Console.ReadLine();
+            var response = Console.ReadLine();
 
       //mgr.AddTicketResponse(ticketNumber, response, false);
       // via WebAPI-service

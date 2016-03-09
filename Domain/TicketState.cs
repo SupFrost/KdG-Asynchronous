@@ -5,7 +5,8 @@ using System.Text;
 
 namespace SC.BL.Domain
 {
-  public enum TicketState : byte
+    [Serializable]
+    public enum TicketState : byte
   {
     Open = 1,
     Answered,

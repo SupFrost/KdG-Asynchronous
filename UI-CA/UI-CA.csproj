@@ -42,6 +42,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +72,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{f5b3ba5b-091d-4eb6-9138-e19842d49e43}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestAsync\TestAsync.csproj">
+      <Project>{467de446-f570-4fd9-ad8c-3531681b6e3a}</Project>
+      <Name>TestAsync</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
