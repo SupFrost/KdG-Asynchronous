@@ -14,6 +14,7 @@ namespace SC.DAL
     IEnumerable<Ticket> ReadTickets();
     // CRUD Ticket
     Ticket CreateTicket(Ticket ticket);
+    Task<Ticket> CreateTicketAsync(Ticket ticket);
     Ticket ReadTicket(int ticketNumber);
     void UpdateTicket(Ticket ticket);
     void UpdateTicketStateToClosed(int ticketNumber);

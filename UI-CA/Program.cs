@@ -1,188 +1,183 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using SC.BL;
 using SC.BL.Domain;
 using SC.UI.CA.ExtensionMethods;
-using TestAsync;
 
 namespace SC.UI.CA
 {
     internal class Program
-  {
+    {
         private static bool quit;
         private static ITicketManager mgr;
         private static Service srv;
 
         private static void Main(string[] args)
-    {
-           
-
+        {
             mgr = new TicketManager();
             srv = new Service();
 
-           
 
-      while (!quit)
-        ShowMenu();
-    }
+            while (!quit)
+                ShowMenu();
+        }
 
-    private static void ShowMenu()
-    {
-      Console.WriteLine("=================================");
-      Console.WriteLine("=== HELPDESK - SUPPORT CENTER ===");
-      Console.WriteLine("=================================");
-      Console.WriteLine("1) Toon alle tickets");
-      Console.WriteLine("2) Toon details van een ticket");
-      Console.WriteLine("3) Toon de antwoorden van een ticket");
-      Console.WriteLine("4) Maak een nieuw ticket");
-      Console.WriteLine("5) Geef een antwoord op een ticket");
-      Console.WriteLine("6) Markeer ticket als 'Closed'");
-      Console.WriteLine("0) Afsluiten");
-      try
-      {
-        DetectMenuAction();
-      }
-            catch (Exception)
-      {
-        Console.WriteLine();
-        Console.WriteLine("Er heeft zich een onverwachte fout voorgedaan!");
-        Console.WriteLine();
-      }
-    }
-    
-    private static void DetectMenuAction()
-    {
-            var inValidAction = false;
-      do
-      {
-        Console.Write("Keuze: ");
-                var input = Console.ReadLine();
-        int action;
-                if (int.TryParse(input, out action))
+        private static void ShowMenu()
         {
-          switch (action)
-          {
-            case 1:
+            Console.WriteLine("=================================");
+            Console.WriteLine("=== HELPDESK - SUPPORT CENTER ===");
+            Console.WriteLine("=================================");
+            Console.WriteLine("1) Toon alle tickets");
+            Console.WriteLine("2) Toon details van een ticket");
+            Console.WriteLine("3) Toon de antwoorden van een ticket");
+            Console.WriteLine("4) Maak een nieuw ticket");
+            Console.WriteLine("5) Geef een antwoord op een ticket");
+            Console.WriteLine("6) Markeer ticket als 'Closed'");
+            Console.WriteLine("0) Afsluiten");
+            try
+            {
+                DetectMenuAction();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Er heeft zich een onverwachte fout voorgedaan!");
+                Console.WriteLine();
+            }
+        }
+
+        private static void DetectMenuAction()
+        {
+            var inValidAction = false;
+            do
+            {
+                Console.Write("Keuze: ");
+                var input = Console.ReadLine();
+                int action;
+                if (int.TryParse(input, out action))
+                {
+                    switch (action)
+                    {
+                        case 1:
                             PrintAllTickets();
                             break;
-            case 2:
+                        case 2:
                             ActionShowTicketDetails();
                             break;
-            case 3:
+                        case 3:
                             ActionShowTicketResponses();
                             break;
-            case 4:
+                        case 4:
                             ActionCreateTicket();
                             break;
-            case 5:
+                        case 5:
                             ActionAddResponseToTicket();
                             break;
-            case 6:
+                        case 6:
                             ActionCloseTicket();
                             break;
-            case 0:
-              quit = true;
-              return;
-            default:
-              Console.WriteLine("Geen geldige keuze!");
-              inValidAction = true;
-              break;
-          }
+                        case 0:
+                            quit = true;
+                            return;
+                        default:
+                            Console.WriteLine("Geen geldige keuze!");
+                            inValidAction = true;
+                            break;
+                    }
+                }
+            } while (inValidAction);
         }
-      } while (inValidAction);
-    }
 
-    private static void ActionCloseTicket()
-    {
-      Console.Write("Ticketnummer: ");
+        private static void ActionCloseTicket()
+        {
+            Console.Write("Ticketnummer: ");
             var input = int.Parse(Console.ReadLine());
 
-      //mgr.ChangeTicketStateToClosed(input);
-      // via WebAPI-service
-      srv.ChangeTicketStateToClosed(input);
-    }
+            //mgr.ChangeTicketStateToClosed(input);
+            // via WebAPI-service
+            srv.ChangeTicketStateToClosed(input);
+        }
 
-    private static void PrintAllTickets()
-    {
+        private static void PrintAllTickets()
+        {
             foreach (Ticket t in mgr.GetTickets())
-        Console.WriteLine(t.GetInfo());
-    }
+                Console.WriteLine(t.GetInfo());
+        }
 
-    private static void ActionShowTicketDetails()
-    {
-      Console.Write("Ticketnummer: ");
+        private static void ActionShowTicketDetails()
+        {
+            Console.Write("Ticketnummer: ");
             var input = int.Parse(Console.ReadLine());
 
-      Ticket t = mgr.GetTicket(input);
-      PrintTicketDetails(t);
-    }
+            Ticket t = mgr.GetTicket(input);
+            PrintTicketDetails(t);
+        }
 
-    private static void PrintTicketDetails(Ticket ticket)
-    {
-      Console.WriteLine("{0,-15}: {1}", "Ticket", ticket.TicketNumber);
-      Console.WriteLine("{0,-15}: {1}", "Gebruiker", ticket.AccountId);
-      Console.WriteLine("{0,-15}: {1}", "Datum", ticket.DateOpened.ToString("dd/MM/yyyy"));
-      Console.WriteLine("{0,-15}: {1}", "Status", ticket.State);
+        private static void PrintTicketDetails(Ticket ticket)
+        {
+            Console.WriteLine("{0,-15}: {1}", "Ticket", ticket.TicketNumber);
+            Console.WriteLine("{0,-15}: {1}", "Gebruiker", ticket.AccountId);
+            Console.WriteLine("{0,-15}: {1}", "Datum", ticket.DateOpened.ToString("dd/MM/yyyy"));
+            Console.WriteLine("{0,-15}: {1}", "Status", ticket.State);
 
-      if (ticket is HardwareTicket)
+            if (ticket is HardwareTicket)
                 Console.WriteLine("{0,-15}: {1}", "Toestel", ((HardwareTicket) ticket).DeviceName);
 
-      Console.WriteLine("{0,-15}: {1}", "Vraag/probleem", ticket.Text);
-    }
+            Console.WriteLine("{0,-15}: {1}", "Vraag/probleem", ticket.Text);
+        }
 
-    private static void ActionShowTicketResponses()
-    {
-      Console.Write("Ticketnummer: ");
+        private static void ActionShowTicketResponses()
+        {
+            Console.Write("Ticketnummer: ");
             var input = int.Parse(Console.ReadLine());
 
-      //IEnumerable<TicketResponse> responses = mgr.GetTicketResponses(input);
-      // via Web API-service
-      Task<IEnumerable<TicketResponse>> responses = srv.GetTicketResponsesAsync(input);
-      if (responses != null) PrintTicketResponses(responses.Result);
-    }
+            //IEnumerable<TicketResponse> responses = mgr.GetTicketResponses(input);
+            // via Web API-service
+            var responses = srv.GetTicketResponsesAsync(input);
+            if (responses != null) PrintTicketResponses(responses.Result);
+        }
 
-    private static void PrintTicketResponses(IEnumerable<TicketResponse> responses)
-    {
+        private static void PrintTicketResponses(IEnumerable<TicketResponse> responses)
+        {
             foreach (TicketResponse r in responses)
-        Console.WriteLine(r.GetInfo());
-    }
+                Console.WriteLine(r.GetInfo());
+        }
 
-    private static void ActionCreateTicket()
-    {
+        private static void ActionCreateTicket()
+        {
             var accountNumber = 0;
             var problem = "";
             var device = "";
-      
-      Console.Write("Is het een hardware probleem (j/n)? ");
+
+            Console.Write("Is het een hardware probleem (j/n)? ");
             var isHardwareProblem = Console.ReadLine().ToLower() == "j";
-      if (isHardwareProblem)
-      {
-        Console.Write("Naam van het toestel: ");
-        device = Console.ReadLine();
-      }
+            if (isHardwareProblem)
+            {
+                Console.Write("Naam van het toestel: ");
+                device = Console.ReadLine();
+            }
 
-      Console.Write("Gebruikersnummer: ");
+            Console.Write("Gebruikersnummer: ");
             accountNumber = int.Parse(Console.ReadLine());
-      Console.Write("Probleem: ");
-      problem = Console.ReadLine();
+            Console.Write("Probleem: ");
+            problem = Console.ReadLine();
 
-      if (!isHardwareProblem)
-        mgr.AddTicket(accountNumber, problem);
-      else
-        mgr.AddTicket(accountNumber, device, problem);
-    }
+            if (!isHardwareProblem)
+                mgr.AddTicket(accountNumber, problem);
+            else
+                mgr.AddTicket(accountNumber, device, problem);
+        }
 
-    private static void ActionAddResponseToTicket()
-    {
-      Console.Write("Ticketnummer: ");
+        private static void ActionAddResponseToTicket()
+        {
+            Console.Write("Ticketnummer: ");
             var ticketNumber = int.Parse(Console.ReadLine());
-      Console.Write("Antwoord: ");
+            Console.Write("Antwoord: ");
             var response = Console.ReadLine();
 
-      //mgr.AddTicketResponse(ticketNumber, response, false);
-      // via WebAPI-service
-      srv.AddTicketResponse(ticketNumber, response, false);
+            //mgr.AddTicketResponse(ticketNumber, response, false);
+            // via WebAPI-service
+            srv.AddTicketResponse(ticketNumber, response, false);
+        }
     }
-  }
 }

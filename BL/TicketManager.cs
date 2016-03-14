@@ -59,7 +59,7 @@ namespace SC.BL
     private Ticket AddTicket(Ticket ticket)
     {
       this.Validate(ticket);
-      return repo.CreateTicket(ticket);
+      return repo.CreateTicketAsync(ticket).Result;
     }
 
     public void ChangeTicket(Ticket ticket)

@@ -3,3 +3,7 @@ C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\bin\Debug\SC.BL.Domain.pdb
 C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\obj\Debug\SC.BL.Domain.dll
 C:\Users\timst\Source\Repos\KdG-Asynchronous\Domain\obj\Debug\SC.BL.Domain.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\Domain\bin\Debug\SC.BL.Domain.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\Domain\bin\Debug\SC.BL.Domain.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\Domain\obj\Debug\SC.BL.Domain.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\Domain\obj\Debug\SC.BL.Domain.pdb

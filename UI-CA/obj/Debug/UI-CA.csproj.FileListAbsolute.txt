@@ -18,3 +18,23 @@ C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\SC.DAL.pdb
 C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\EntityFramework.xml
 C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\timst\Source\Repos\KdG-Asynchronous\UI-CA\obj\Debug\UI-CA.csprojResolveAssemblyReference.cache
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\obj\Debug\UI-CA.csprojResolveAssemblyReference.cache
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.UI.CA.exe.config
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.UI.CA.exe
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.UI.CA.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.BL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.BL.Domain.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\TestAsync.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.DAL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\EntityFramework.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.BL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.BL.Domain.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\TestAsync.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\SC.DAL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\EntityFramework.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\obj\Debug\SC.UI.CA.exe
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\UI-CA\obj\Debug\SC.UI.CA.pdb

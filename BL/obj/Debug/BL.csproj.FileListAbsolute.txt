@@ -11,3 +11,16 @@ C:\Users\timst\Source\Repos\KdG-Asynchronous\BL\bin\Debug\EntityFramework.SqlSer
 C:\Users\timst\Source\Repos\KdG-Asynchronous\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 C:\Users\timst\Source\Repos\KdG-Asynchronous\BL\obj\Debug\SC.BL.dll
 C:\Users\timst\Source\Repos\KdG-Asynchronous\BL\obj\Debug\SC.BL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\SC.BL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\SC.BL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\SC.BL.Domain.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\SC.DAL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\EntityFramework.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\SC.DAL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\SC.BL.Domain.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\EntityFramework.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\obj\Debug\SC.BL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\BL\obj\Debug\SC.BL.pdb

@@ -10,3 +10,15 @@ C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\bin\Debug\EntityFramework.SqlSe
 C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\obj\Debug\SC.DAL.dll
 C:\Users\timst\Source\Repos\KdG-Asynchronous\DAL\obj\Debug\SC.DAL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\SC.DAL.dll.config
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\SC.DAL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\SC.DAL.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\SC.BL.Domain.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\SC.BL.Domain.pdb
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\obj\Debug\SC.DAL.dll
+C:\Users\Nick Jorens\Google Drive\School\2015-2016\Programmeren 2 - .NET - Deel 2\Projecten\Asynchronous\DAL\obj\Debug\SC.DAL.pdb

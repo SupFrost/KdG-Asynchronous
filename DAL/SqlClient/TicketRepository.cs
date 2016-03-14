@@ -63,7 +63,12 @@ namespace SC.DAL.SqlClient
       return tickets;
     }
 
-    public Ticket ReadTicket(int ticketNumber)
+      public Task<Ticket> CreateTicketAsync(Ticket ticket)
+      {
+          throw new NotImplementedException();
+      }
+
+      public Ticket ReadTicket(int ticketNumber)
     {
       Ticket requestedTicket = null;
 

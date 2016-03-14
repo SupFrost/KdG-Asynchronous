@@ -25,7 +25,13 @@ namespace SC.DAL
       tickets.Add(ticket);
       return ticket;
     }
-    public IEnumerable<Ticket> ReadTickets()
+
+      public Task<Ticket> CreateTicketAsync(Ticket ticket)
+      {
+          throw new NotImplementedException();
+      }
+
+      public IEnumerable<Ticket> ReadTickets()
     {
       return tickets;
     }

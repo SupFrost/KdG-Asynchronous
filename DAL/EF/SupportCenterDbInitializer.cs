@@ -10,19 +10,12 @@ namespace SC.DAL.EF
 {
   internal class SupportCenterDbInitializer 
     : DropCreateDatabaseAlways<SupportCenterDbContext>
-  { 
-    public void Seed(SupportCenterDbContext context)
+  {
+      protected override void Seed(SupportCenterDbContext context)
     {
       
-            
-     TicketRepositoryHC trt = new TicketRepositoryHC();
+       TicketRepositoryHC trt = new TicketRepositoryHC();
         context.Tickets.AddRange(trt.ReadTickets());
-
-
-
-
-            
-
 
       // Save the changes in the context (all added entities) to the database
       context.SaveChanges();
