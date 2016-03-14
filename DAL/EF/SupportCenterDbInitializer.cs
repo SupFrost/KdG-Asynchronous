@@ -9,13 +9,13 @@ using SC.BL.Domain;
 namespace SC.DAL.EF
 {
   internal class SupportCenterDbInitializer 
-    : DropCreateDatabaseIfModelChanges<SupportCenterDbContext>
-  {
-    protected override void Seed(SupportCenterDbContext context)
+    : DropCreateDatabaseAlways<SupportCenterDbContext>
+  { 
+    public void Seed(SupportCenterDbContext context)
     {
       
             
-     TicketRepositoryText trt = new TicketRepositoryText();
+     TicketRepositoryHC trt = new TicketRepositoryHC();
         context.Tickets.AddRange(trt.ReadTickets());
 
 
