@@ -32,9 +32,12 @@ namespace SC.DAL.EF
       return ticket; // 'TicketNumber' has been created by the database!
     }
     public Ticket ReadTicket(int ticketNumber)
-    {
-      throw new System.NotImplementedException();
-    }
+        {
+            Ticket tickets = ctx.Tickets.ToList().FindAll( t => t.TicketNumber == ticketNumber)[0];
+            // all (parent-)entities are loaded before lazy-loading associated data (doesn't need MARS)
+            return tickets;
+
+        }
     public void UpdateTicket(Ticket ticket)
     {
       // Make sure that 'ticket' is known by context
