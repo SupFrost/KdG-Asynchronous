@@ -33,6 +33,8 @@ namespace SC.DAL.EF
     }
     public Ticket ReadTicket(int ticketNumber)
         {
+            
+
             Ticket tickets = ctx.Tickets.ToList().FindAll( t => t.TicketNumber == ticketNumber)[0];
             // all (parent-)entities are loaded before lazy-loading associated data (doesn't need MARS)
             return tickets;
